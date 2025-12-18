@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mass Plagiarism Checker</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+<h2>Mass File Plagiarism Checker</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="files[]" multiple required>
+    <br><br>
+    <button type="submit">Check Plagiarism</button>
+</form>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+{% if results %}
+<h3>Plagiarism Report</h3>
+
+<table>
+    <tr>
+        <th>File 1</th>
+        <th>File 2</th>
+        <th>Similarity (%)</th>
+    </tr>
+
+    {% for r in results %}
+    <tr>
+        <td>{{ r.file1 }}</td>
+        <td>{{ r.file2 }}</td>
+        <td>{{ r.similarity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</body>
+</html>
