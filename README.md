@@ -2,7 +2,7 @@
 
 A web-based plagiarism detection system designed to compare **2 to 100 files simultaneously** and generate detailed **cross-file similarity reports** using Natural Language Processing (NLP) techniques.
 
-The application supports multiple document and source-code formats and performs efficient pairwise comparisons without redundant or self-matching operations.
+The application supports multiple document and source-code formats and performs efficient pairwise comparisons without redundant .
 
 ---
 
