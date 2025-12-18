@@ -55,26 +55,17 @@ This methodology is commonly used in academic and industry-grade text similarity
 
 ## Project Structure
 
+## Project Structure
+
+```text
 mass-plagiarism-checker/
-│
 ├── app.py
-│   └── Flask application entry point and request handling
-│
 ├── fileReader.py
-│   └── Utilities for extracting text from different file formats
-│
 ├── plagiarismEngine.py
-│   └── Core NLP logic for pairwise plagiarism detection
-│
 ├── requirements.txt
-│   └── Python project dependencies
-│
 ├── uploads/
-│   └── Temporary storage for uploaded files
-│
 └── templates/
     └── index.html
-        └── Web interface for file upload and result display
 
 
 
